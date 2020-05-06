@@ -1,0 +1,87 @@
+{
+    "state_01" : {
+        "name" : "Hello world application",
+        "description" : "A small patch that prints a message to the console.",
+        "objects" : [
+            {"name"   : "button",
+                "args"    : [],
+                "pos"     : [10, 77],
+                "varname" : "jscreated_trigger_button",
+                "init"    : [["bgcolor", 0.643, 0.286, 0.286, 1.000]]},
+            {"name"   : "message",
+                "args"    : [],
+                "pos"     : [10, 140],
+                "varname" : "jscreated_hello_world_message",
+                "col"     : [],
+                "init"    : [["set", "Hello world"]]},
+            {"name"   : "print",
+                "args"    : [],
+                "pos"     : [10, 213],
+                "varname" : "jscreated_print_object",
+                "init"    : []}
+        ],
+        "connections" : [
+            [0, 0 , 1, 0],
+            [1, 0 , 2, 0]
+        ],
+        "init" : [[0, ["bang"]]]
+    },
+
+    "state_02" : {
+        "name" : "The trigger object",
+        "description" : "Bang this trigger to see which order things are sent out.",
+        "objects" : [
+            {"name"   : "button",
+                "args"    : [],
+                "pos"     : [10, 77],
+                "varname" : "jscreated_trigger_button",
+                "init"    : [["bgcolor", 0.643, 0.486, 0.886, 1.000]]},
+            {"name"   : "t",
+                "args"    : ["b", 0, "hello"],
+                "pos"     : [10, 140],
+                "varname" : "jscreated_trigger",
+                "col"     : [],
+                "init"    : []},
+            {"name"   : "print",
+                "args"    : [],
+                "pos"     : [10, 213],
+                "varname" : "jscreated_print_object",
+                "init"    : []}
+        ],
+        "connections" : [
+            [0, 0 , 1, 0],
+            [1, 0 , 2, 0],
+            [1, 1 , 2, 0],
+            [1, 2 , 2, 0]
+        ],
+        "init" : []
+    },
+
+    "state_03" : {
+        "name" : "The stuttering machine",
+        "description" : "This machine has something to say, but can't seem to get the words out.",
+        "objects" : [
+            {"name"   : "button",
+                "args"    : [],
+                "pos"     : [10, 77],
+                "varname" : "jscreated_trigger_button",
+                "init"    : [["bgcolor", 0.243, 0.186, 0.886, 1.000]]},
+            {"name"   : "uzi",
+                "args"    : [256],
+                "pos"     : [10, 140],
+                "varname" : "jscreated_trigger",
+                "col"     : [],
+                "init"    : []},
+            {"name"   : "my_abstraction",
+                "args"    : [],
+                "pos"     : [10, 213],
+                "varname" : "jscreated_abstraction",
+                "init"    : []}
+        ],
+        "connections" : [
+            [0, 0 , 1, 0],
+            [1, 0 , 2, 0]
+        ],
+        "init" : []
+    }
+}
